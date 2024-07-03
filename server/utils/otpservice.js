@@ -1,5 +1,5 @@
 import crypto from "crypto";
-import twilio from "twilio";
+// import twilio from "twilio";
 import nodemailer from "nodemailer";
 import { generateHash } from "./hashservice.js";
 
@@ -8,20 +8,20 @@ export const generateOTP = () => {
   return otp;
 };
 
-export const sendOTPBySMS = async (phone, otp) => {
-  const SMS_AUTH_TOKEN = process.env.SMS_AUTH_TOKEN;
-  const SMS_SID = process.env.SMS_SID;
+// export const sendOTPBySMS = async (phone, otp) => {
+//   const SMS_AUTH_TOKEN = process.env.SMS_AUTH_TOKEN;
+//   const SMS_SID = process.env.SMS_SID;
 
-  const client = twilio(SMS_SID, SMS_AUTH_TOKEN, {
-    lazyLoading: true,
-  });
+//   const client = twilio(SMS_SID, SMS_AUTH_TOKEN, {
+//     lazyLoading: true,
+//   });
 
-  return await client.messages.create({
-    to: phone,
-    from: process.env.SMS_FROM_NUMBER,
-    body: `Your AuaralLink OTP is :- ${otp}`,
-  });
-};
+//   return await client.messages.create({
+//     to: phone,
+//     from: process.env.SMS_FROM_NUMBER,
+//     body: `Your AuaralLink OTP is :- ${otp}`,
+//   });
+// };
 
 export const sendEmail = (receiverEmail, otp) => {
   const transporter = nodemailer.createTransport({

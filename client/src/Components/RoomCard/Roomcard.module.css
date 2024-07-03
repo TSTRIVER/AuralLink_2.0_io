@@ -1,0 +1,69 @@
+.card {
+  background: #1d1d1d;
+  padding: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  position: relative;
+  height: 80%;
+}
+
+.speakers {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin: 20px 0;
+}
+
+.avatars > img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #20bd5f;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #1d1d1d;
+}
+
+.avatars img:last-child {
+  top: 20px;
+  left: 20px;
+}
+
+.names {
+  margin-left: 100px;
+}
+
+.names span {
+  padding-bottom: 5px;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.singleSpeaker .avatars img {
+  position: initial;
+}
+
+.singleSpeaker .names {
+  margin-left: 20px;
+}
+
+.nameWrapper > img {
+  width: 20px;
+  height: 20px;
+}
+
+.card > img {
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  top: 82%;
+  right: 5%;
+}
+
+.speakerNumber {
+  font-weight: bold;
+  position: absolute;
+  top: 82%;
+}

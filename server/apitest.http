@@ -1,0 +1,17 @@
+POST http://localhost:4000/api/send-otp HTTP/3
+Content-type: application/json
+
+{
+   "phone" : "+919324864164"
+}
+
+###
+
+POST http://localhost:4000/api/verify-otp HTTP/3
+Content-type: application/json
+
+{
+   "phone" : "+919324864164",
+   "otp" : "8764",
+   "hash" : "d4ffab4bf5b897899ad925eabf69ea364ef25a83dca398a5e6f78deb28cabf2e.1695305709685"
+}
